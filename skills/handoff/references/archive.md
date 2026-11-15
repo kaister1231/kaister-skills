@@ -13,7 +13,7 @@
    - Rollback、风险、失效条件
    - Links：[[handoff 笔记]]、相关排查笔记
    不要照抄 Coding Log；不写 secrets、客户数据、未脱敏的 logs 或 SQL 结果。
-   按 CLAUDE.md 第 10 节写；每节不超过一屏，Tests & Evidence 直接引用 handoff 的 Test Plan。
+   按全局 Writing Docs 规范写；每节不超过一屏，Tests & Evidence 直接引用 handoff 的 Test Plan。
 4. 把完整草稿发给我。目标文件已存在时先告诉我，不要覆盖。
 5. 我确认后：
    - 写入实现方案；

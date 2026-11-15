@@ -4,10 +4,10 @@ Kaister 的个人 Agent Skills。结构为 `skills/<name>/SKILL.md`，符合 [Ag
 
 | Skill | 用途 | 入口 |
 | --- | --- | --- |
-| `handoff` | 规划 agent 与编程 agent 之间的交接：接手、续做、验收（含 Test Plan）、归档实现方案；以及规划方（通常是程小帮）产 repo `docs/handoff/` 给外部 agent | `/handoff [take\|resume\|review\|archive\|docs] <路径或关键词>` |
+| `handoff` | 规划 agent 与编程 agent 之间的交接：接手、续做、验收（含 Test Plan）、归档实现方案；以及规划方（通常是程小帮）产 repo `docs/handoff/` 给外部 agent | `/handoff [take\|resume\|review\|archive\|docs\|xiaoxia] <路径或关键词>` |
 | `obsidian-project-docs` | Obsidian vault `07_AI_Docs/` 的项目文档布局、查找、回写 | 自动触发 |
 
-`handoff` 合并自原 `agent-handoff`、`coding-handoff` skill 和 `/handoff`、`/handoff-review`、`/handoff-archive` 三个 command。
+`handoff` 合并自原 `agent-handoff`、`coding-handoff` skill 和 `/handoff`、`/handoff-review`、`/handoff-archive`、`/handoff-takeover`、`/handoff-xiaoxia` 五个 command（后两个来自程小帮的 `~/.chengxiaobang/commands/`）。`xiaoxia` 子命令依赖本机的 `xiaoxia-bridge` skill，它含内部 ID，不进本 repo。
 
 ## 安装
 
@@ -30,4 +30,4 @@ npx skills add ~/code/kaister-skills -g -a claude-code
 
 ## 迁移注意
 安装前先移走旧的同名或被合并的文件，避免 `/handoff` 冲突：
-`~/.claude/skills/agent-handoff`、`~/.agents/skills/agent-handoff`、`~/.agents/skills/coding-handoff`（及 `~/.claude/skills/coding-handoff` 软链）、`~/.claude/commands/handoff*.md`。
+`~/.claude/skills/agent-handoff`、`~/.agents/skills/agent-handoff`、`~/.agents/skills/coding-handoff`（及 `~/.claude/skills/coding-handoff` 软链）、`~/.claude/commands/handoff*.md`、`~/.chengxiaobang/commands/handoff*.md`。

@@ -9,7 +9,7 @@ description: >-
   asks to 出方案给编程 agent, 接手/继续 a handoff, 验收, 回写结果, 归档方案,
   「让程小帮出文档，agent 读文档写代码」, or 「查清楚再交给 Claude Code /
   Codex / Cursor / OpenCode」.
-argument-hint: "[take|resume|review|archive|docs] <handoff 路径或关键词>"
+argument-hint: "[take|resume|review|archive|docs|xiaoxia] <handoff 路径或关键词>"
 ---
 
 # Handoff
@@ -26,9 +26,10 @@ Invoked as `/handoff $ARGUMENTS`. First word = subcommand, the rest = target
 | `review` | 按 Acceptance 验收 + 写 Test Plan (read-only until confirmed) | `references/review.md` |
 | `archive` | 归档成 `YYYY-MM-DD-<topic>-实现方案.md` (draft first) | `references/archive.md` |
 | `docs` | Planner (usually 程小帮) writes repo `docs/handoff/` for an external agent | `references/docs.md` |
+| `xiaoxia` | 把 handoff 或写代码 / Review / 排查任务交给小虾（飞书），取结果并按 MR 验收；needs local `xiaoxia-bridge` | `references/xiaoxia.md` |
 
 - Read the matching reference file in full before acting.
-- `take`, `resume`, `review`, `archive` change status or files: run them only
+- `take`, `resume`, `review`, `archive`, `xiaoxia` change status, files, or send messages: run them only
   when the user typed the subcommand or explicitly asked for that step. When
   this skill loads on its own (no subcommand), act as the chat agent below
   (draft a plan) and suggest the next `/handoff …` command.
