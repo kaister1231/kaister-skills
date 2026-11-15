@@ -3,8 +3,9 @@ name: handoff
 description: >-
   Hand work between a planning agent and a coding agent, then verify and
   archive it. Two channels: a handoff note in the Obsidian vault (default),
-  or repo docs/handoff/ written by 程小帮 for an external agent with no
-  internal MCP. Use when the user says 交接/handoff, gives a handoff path,
+  or repo docs/handoff/ written by a planner with internal-data access
+  (usually 程小帮) for an external agent with no internal MCP. Use when
+  the user says 交接/handoff, gives a handoff path,
   asks to 出方案给编程 agent, 接手/继续 a handoff, 验收, 回写结果, 归档方案,
   「让程小帮出文档，agent 读文档写代码」, or 「查清楚再交给 Claude Code /
   Codex / Cursor / OpenCode」.
@@ -24,7 +25,7 @@ Invoked as `/handoff $ARGUMENTS`. First word = subcommand, the rest = target
 | `resume` | 继续一个中断的 handoff (`in-progress`, or `ready` after a failed review) | `references/resume.md` |
 | `review` | 按 Acceptance 验收 + 写 Test Plan (read-only until confirmed) | `references/review.md` |
 | `archive` | 归档成 `YYYY-MM-DD-<topic>-实现方案.md` (draft first) | `references/archive.md` |
-| `docs` | 程小帮 writes repo `docs/handoff/` for an external agent | `references/docs.md` |
+| `docs` | Planner (usually 程小帮) writes repo `docs/handoff/` for an external agent | `references/docs.md` |
 
 - Read the matching reference file in full before acting.
 - `take`, `resume`, `review`, `archive` change status or files: run them only

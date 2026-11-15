@@ -4,7 +4,7 @@ Kaister 的个人 Agent Skills。结构为 `skills/<name>/SKILL.md`，符合 [Ag
 
 | Skill | 用途 | 入口 |
 | --- | --- | --- |
-| `handoff` | 规划 agent 与编程 agent 之间的交接：接手、续做、验收（含 Test Plan）、归档实现方案；以及程小帮产 repo `docs/handoff/` 给外部 agent | `/handoff [take\|resume\|review\|archive\|docs] <路径或关键词>` |
+| `handoff` | 规划 agent 与编程 agent 之间的交接：接手、续做、验收（含 Test Plan）、归档实现方案；以及规划方（通常是程小帮）产 repo `docs/handoff/` 给外部 agent | `/handoff [take\|resume\|review\|archive\|docs] <路径或关键词>` |
 | `obsidian-project-docs` | Obsidian vault `07_AI_Docs/` 的项目文档布局、查找、回写 | 自动触发 |
 
 `handoff` 合并自原 `agent-handoff`、`coding-handoff` skill 和 `/handoff`、`/handoff-review`、`/handoff-archive` 三个 command。
